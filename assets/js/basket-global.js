@@ -47,7 +47,12 @@ function changeQuantity(btn, step) {
     saveBasket();
     updateBasketCount();
 
-    // renderAllProducts(basket);
+    saveBasket();
+    updateBasketCount();
+
+    if (typeof renderProducts === "function") {
+        renderProducts(cards);
+    }
 
 }
 // شغل العداد أول ما الصفحة تفتح
